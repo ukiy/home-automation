@@ -1,2 +1,28 @@
-.col-md-12
-    | This is the switch view.
+div(ng-include='"components/navbar/navbar.html"')
+
+header#banner.hero-unit
+  .container
+    h1 Ukiy's House light switch
+    p.lead you can switch Ukiy house!
+
+.container
+  .row
+    .col-lg-12
+
+  h1.page-header You try it !
+  form.switch-form
+    label Switch Ukiy house light
+      p.input-group
+        button.btn.btn-default(type='submit', ng-click='toOn()') ON!
+        button.btn.btn-default(type='submit', ng-click='toOff()') OFF!
+
+
+
+footer.footer
+  .container
+    p
+      | Angular Fullstack v2.0.13
+      = ' | '
+      a(href='https://twitter.com/tyhenkel') @tyhenkel
+      = ' | '
+      a(href='https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open') Issues

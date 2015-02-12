@@ -1,8 +1,9 @@
 'use strict';
 
 angular.module('homeAutomationApp')
-  .controller('MainCtrl', function ($scope, $http, socket) {
+  .controller('MainCtrl', function ($scope, $http, $location, socket, Auth) {
     $scope.awesomeThings = [];
+    $scope.isLoggedIn = Auth.isLoggedIn;
 
     $http.get('/api/things').success(function(awesomeThings) {
       $scope.awesomeThings = awesomeThings;
@@ -24,4 +25,8 @@ angular.module('homeAutomationApp')
     $scope.$on('$destroy', function () {
       socket.unsyncUpdates('thing');
     });
+
+    $scope.toSwitch = function() {
+      $location.path('/switch');
+    };
   });

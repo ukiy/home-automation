@@ -23,6 +23,11 @@ header#banner.hero-unit
       span.input-group-btn
         button.btn.btn-primary(type='submit', ng-click='addThing()') Add New
 
+  form.switch-form(ng-show='isLoggedIn()')
+    label Switch Ukiy house ligh
+    p.input-group
+      button.btn.btn-default(type='submit', ng-click='toSwitch()') Switch
+
 footer.footer
   .container
     p

@@ -6,6 +6,7 @@ angular.module('homeAutomationApp')
       .state('switch', {
         url: '/switch',
         templateUrl: 'app/switch/switch.html',
-        controller: 'SwitchCtrl'
+        controller: 'SwitchCtrl',
+        authenticate: true
       });
   });

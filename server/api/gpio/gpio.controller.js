@@ -2,7 +2,7 @@
 
 var _ = require('lodash');
 var Gpio = require('./gpio.model');
-var gpio = require('pi-gpio');
+//var gpio = require('pi-gpio');
 
 // Get list of gpios
 exports.index = function(req, res) {
