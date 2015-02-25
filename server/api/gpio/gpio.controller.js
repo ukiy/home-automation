@@ -45,11 +45,8 @@ exports.update = function(req, res) {
 //      return res.json(200, gpio);
 //    });
 //  });
-  console.log("call gpio update");
   gpio.open(req.params.id, req.body.mode)
     .then(function(gpio){
-      console.log(req.body.mode);
-      console.log(req.body.value);
       gpio.value(req.body.value);
       return res.send({mes: 'ok'});
     }).catch(function(err){
